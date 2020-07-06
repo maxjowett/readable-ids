@@ -7,7 +7,7 @@ export const handleConfig = async config => {
   const nouns = [];
 
   const adjectiveStream = readline.createInterface({
-    input: fs.createReadStream(`./lib/${theme}/nouns.txt`),
+    input: fs.createReadStream(`./lib/${theme}/adjectives.txt`),
     output: process.stdout,
     terminal: false
   });
