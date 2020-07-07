@@ -1,5 +1,4 @@
 import fs from 'fs';
-import readline from 'readline';
 
 import { verifyConfig, handleConfig } from './utils/index.js';
 

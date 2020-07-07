@@ -1,5 +1,4 @@
 import fs from 'fs';
-import readline from 'readline';
 
 const createRandomNumber = () => {
   return Math.round(Math.random() * 64);
