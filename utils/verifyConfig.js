@@ -3,11 +3,11 @@ export const verifyConfig = config => {
   const { useNumbers } = config || '';
 
   let verifiedConfig = {
-    theme: 'dark',
+    theme: 'default',
     useNumbers: false
   };
 
-  if (theme === 'dark' || theme == 'bright') {
+  if (theme === 'dark' || theme == 'random') {
     verifiedConfig.theme = theme;
   }
 
