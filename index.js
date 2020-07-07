@@ -1,34 +1,20 @@
-import { adjectives, nouns } from './lib/index.js';
+import fs from 'fs';
+import readline from 'readline';
 
-const verifyConfig = config => {
-  const { theme } = config || '';
-  const { useNumbers } = config || '';
+import { verifyConfig, handleConfig } from './utils/index.js';
 
-  let verifiedConfig = {
-    selectedTheme: 'dark',
-    useNumbers: false
-  };
+const assembleId = parts => {
+  const { adjectives, nouns, number } = parts;
 
-  if (theme === 'dark' || theme == 'bright') {
-    verifiedConfig.selectedTheme = theme;
-  }
-
-  if (useNumbers === true) {
-    verifiedConfig.useNumbers = true;
-  }
-
-  return generateId(verifiedConfig);
+  let adjective = `${adjectives[Math.floor(Math.random() * adjectives.length)]}`;
+  let noun = `${nouns[Math.floor(Math.random() * nouns.length)]}`;
+  return number ? `${adjective}-${noun}-${number}` : `${adjective}-${noun}`;
 };
 
-const getRandomAdjective = () => {
-  return adjectives[Math.floor(Math.random() * adjectives.length)];
+const createId = config => {
+  let verifiedConfig = verifyConfig(config);
+  const elements = handleConfig(verifiedConfig);
+  return assembleId(elements);
 };
 
-const getRandomNoun = () => {
-  return nouns[Math.floor(Math.random() * nouns.length)];
-};
-
-const generateId = config => {
-  console.log('Config: ', config);
-  return `${getRandomAdjective()}-${getRandomNoun()}`;
-};
+export default createId;
