@@ -1,0 +1,16 @@
+camel
+chimpanzee
+elephant
+ferret
+giraffe
+hedgehog
+kangaroo
+lemur
+llama
+ostrich
+otter
+platypus
+sloth
+squirrel
+turtle
+walrus
