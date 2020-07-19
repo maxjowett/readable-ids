@@ -1,4 +1,4 @@
-# readable-ids
+[#](#) readable-ids
 
 readable-ids is a JavaScript utility that generates ids you can understand.
 
@@ -43,6 +43,11 @@ createId({theme: 'random', useNumbers: true}) // inquisitive-platypus-62
 Calling `createId()` without the optional configuration object defaults to the following behavior: `createId({theme: 'default', useNumbers: false})`
 
 ## Namespace
-Both `default` and `dark` themes contain 32 adjectives, 24 nouns, creating 768 unique possibilities. By leveraging the `useNumbers` argument, which returns a number between 0 and 64, we can increase the number of possibilities to 49,152.
+Both `default` and `dark` themes contain 32 adjectives, 24 nouns, whereas the `random` theme contains 16 adjectives and 16 nouns. By leveraging the `useNumbers` argument, which returns a number between 0 and 64, we can increase the number of possibilities significantly, see below for more detailed information.
 
-The `random` theme currently contains 16 adjectives and 16 nouns, thus 256 possibilites, or 16,384 when called in conjunction with `useNumbers`.
+### Possibilities
+Theme | `useNumbers: false` | `useNumbers: true`
+--- | --- | ---
+default | 768 | 49,152
+dark | 768 | 49,152
+random | 256 | 16,384
