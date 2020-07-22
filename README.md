@@ -43,7 +43,7 @@ createId({theme: 'random', useNumbers: true}) // inquisitive-platypus-62
 Calling `createId()` without the optional configuration object defaults to the following behavior: `createId({theme: 'default', useNumbers: false})`
 
 ## Namespace
-Both `default` and `dark` themes contain 32 adjectives, 24 nouns, whereas the `random` theme contains 16 adjectives and 16 nouns. By leveraging the `useNumbers` argument, which returns a number between 0 and 64, we can increase the number of possibilities significantly, see below for more detailed information.
+Both `default` and `dark` themes contain 32 adjectives and 24 nouns, whereas the `random` theme contains 16 adjectives and 16 nouns. By leveraging the `useNumbers` argument, which returns a number between 0 and 64, we can increase the number of possibilities significantly, see below for more detailed information.
 
 ### Possibilities
 Theme | `useNumbers: false` | `useNumbers: true`
