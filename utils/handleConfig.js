@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const createRandomNumber = () => {
   return Math.round(Math.random() * 64);
@@ -12,11 +13,17 @@ export const handleConfig = config => {
   const nouns = [];
 
   const f1 = fs.readFileSync(
-    path.resolve(path.resolve(), `./lib/${theme}/adjectives.txt`),
+    path.resolve(
+      fileURLToPath(import.meta.url),
+      `../../lib/${theme}/adjectives.txt`
+    ),
     'utf-8'
   );
   const f2 = fs.readFileSync(
-    path.resolve(path.resolve(), `./lib/${theme}/nouns.txt`),
+    path.resolve(
+      fileURLToPath(import.meta.url),
+      `../../lib/${theme}/nouns.txt`
+    ),
     'utf-8'
   );
 
