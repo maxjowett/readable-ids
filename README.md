@@ -1,4 +1,4 @@
-[#](#) readable-ids
+# readable-ids
 
 readable-ids is a JavaScript utility that generates ids you can understand.
 
