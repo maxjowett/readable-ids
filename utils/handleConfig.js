@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const createRandomNumber = () => {
-  return Math.round(Math.random() * 64);
+  return Math.ceil(Math.random() * 64);
 };
 
 export const handleConfig = config => {
