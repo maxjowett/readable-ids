@@ -6,7 +6,7 @@ beautiful
 blissful
 breathtaking
 bright
-charming
+captivating
 charming
 cheerful
 content
@@ -31,8 +31,8 @@ magical
 peaceful
 playful
 pleasant
+quiet
 relaxed
-serene
 serene
 smooth
 soft
